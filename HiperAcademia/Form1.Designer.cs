@@ -39,6 +39,8 @@
             this.cbxDia = new System.Windows.Forms.ComboBox();
             this.cbxMes = new System.Windows.Forms.ComboBox();
             this.cbxAno = new System.Windows.Forms.ComboBox();
+            this.txtMes = new System.Windows.Forms.TextBox();
+            this.btnMes = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtNome
@@ -132,11 +134,30 @@
             this.cbxAno.Size = new System.Drawing.Size(98, 21);
             this.cbxAno.TabIndex = 11;
             // 
+            // txtMes
+            // 
+            this.txtMes.Location = new System.Drawing.Point(255, 365);
+            this.txtMes.Name = "txtMes";
+            this.txtMes.Size = new System.Drawing.Size(100, 20);
+            this.txtMes.TabIndex = 12;
+            // 
+            // btnMes
+            // 
+            this.btnMes.Location = new System.Drawing.Point(361, 363);
+            this.btnMes.Name = "btnMes";
+            this.btnMes.Size = new System.Drawing.Size(100, 23);
+            this.btnMes.TabIndex = 13;
+            this.btnMes.Text = "Traduzir";
+            this.btnMes.UseVisualStyleBackColor = true;
+            this.btnMes.Click += new System.EventHandler(this.btnMes_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnMes);
+            this.Controls.Add(this.txtMes);
             this.Controls.Add(this.cbxAno);
             this.Controls.Add(this.cbxMes);
             this.Controls.Add(this.cbxDia);
@@ -168,6 +189,8 @@
         private System.Windows.Forms.ComboBox cbxDia;
         private System.Windows.Forms.ComboBox cbxMes;
         private System.Windows.Forms.ComboBox cbxAno;
+        private System.Windows.Forms.TextBox txtMes;
+        private System.Windows.Forms.Button btnMes;
     }
 }
 
