@@ -41,6 +41,7 @@
             this.cbxAno = new System.Windows.Forms.ComboBox();
             this.txtMes = new System.Windows.Forms.TextBox();
             this.btnMes = new System.Windows.Forms.Button();
+            this.btnPares = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtNome
@@ -136,14 +137,14 @@
             // 
             // txtMes
             // 
-            this.txtMes.Location = new System.Drawing.Point(255, 365);
+            this.txtMes.Location = new System.Drawing.Point(259, 281);
             this.txtMes.Name = "txtMes";
             this.txtMes.Size = new System.Drawing.Size(100, 20);
             this.txtMes.TabIndex = 12;
             // 
             // btnMes
             // 
-            this.btnMes.Location = new System.Drawing.Point(361, 363);
+            this.btnMes.Location = new System.Drawing.Point(365, 279);
             this.btnMes.Name = "btnMes";
             this.btnMes.Size = new System.Drawing.Size(100, 23);
             this.btnMes.TabIndex = 13;
@@ -151,11 +152,22 @@
             this.btnMes.UseVisualStyleBackColor = true;
             this.btnMes.Click += new System.EventHandler(this.btnMes_Click);
             // 
+            // btnPares
+            // 
+            this.btnPares.Location = new System.Drawing.Point(365, 322);
+            this.btnPares.Name = "btnPares";
+            this.btnPares.Size = new System.Drawing.Size(100, 23);
+            this.btnPares.TabIndex = 14;
+            this.btnPares.Text = "Meses Pares";
+            this.btnPares.UseVisualStyleBackColor = true;
+            this.btnPares.Click += new System.EventHandler(this.btnPares_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnPares);
             this.Controls.Add(this.btnMes);
             this.Controls.Add(this.txtMes);
             this.Controls.Add(this.cbxAno);
@@ -191,6 +203,7 @@
         private System.Windows.Forms.ComboBox cbxAno;
         private System.Windows.Forms.TextBox txtMes;
         private System.Windows.Forms.Button btnMes;
+        private System.Windows.Forms.Button btnPares;
     }
 }
 

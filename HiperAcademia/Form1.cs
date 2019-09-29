@@ -58,9 +58,17 @@ namespace HiperAcademia
                 { 12 , "Dezembro" }
             };
 
-            foreach (int dia in Dias)
+            int indice = 0;
+
+            while (indice < Dias.Length)
             {
-                cbxDia.Items.Add(dia);
+                cbxDia.Items.Add(Dias[indice]);
+                indice++;
+            }
+
+            for (int i = 0; i < Dias.Length; i++)
+            {
+                cbxDia.Items.Add(Dias[i]);
             }
 
             foreach (int ano in Anos)
@@ -70,9 +78,7 @@ namespace HiperAcademia
 
             cbxMes.DataSource = new BindingSource(Meses, null);
             cbxMes.DisplayMember = "Value";
-            cbxMes.ValueMember = "Key";
-
-            
+            cbxMes.ValueMember = "Key";            
         }
 
         private void BtnCalcular_Click(object sender, EventArgs e)
@@ -193,6 +199,28 @@ namespace HiperAcademia
             string descricao = TraduzirMesLinq(mes);
 
             MessageBox.Show(descricao);
+        }
+
+        private List<string> ListarMesesPares()
+        {
+            List<string> mesesPares = new List<string>();
+
+            foreach (var mes in Meses)
+            {
+                var numero = mes.Key;
+
+                if (numero % 2 != 0)
+                    continue;
+
+                mesesPares.Add(mes.Value);
+            }
+
+            return mesesPares;
+        }
+
+        private void btnPares_Click(object sender, EventArgs e)
+        {
+            ListarMesesPares();
         }
     }
 }
