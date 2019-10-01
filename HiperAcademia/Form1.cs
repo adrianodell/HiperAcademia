@@ -196,7 +196,9 @@ namespace HiperAcademia
                 return;
             }
 
-            string descricao = TraduzirMesLinq(mes);
+            //string descricao = TraduzirMesLinq(mes);
+
+            string descricao = TraduzirDiaDaSemana((short)mes);
 
             MessageBox.Show(descricao);
         }
@@ -221,6 +223,24 @@ namespace HiperAcademia
         private void btnPares_Click(object sender, EventArgs e)
         {
             ListarMesesPares();
+        }
+
+        private string TraduzirDiaDaSemana(short d)
+        {
+            var dia = (DiaDaSemana)Enum.Parse(typeof(DiaDaSemana), d.ToString());
+
+            return dia.ToString();
+        }
+
+        private enum DiaDaSemana : short
+        {
+            Domingo = 1,
+            Segunda = 2,
+            Terca = 3,
+            Quarta = 4,
+            Quinta = 5,
+            Sexta = 6,
+            Sabado = 7
         }
     }
 }
