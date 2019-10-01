@@ -227,7 +227,7 @@ namespace HiperAcademia
 
         private string TraduzirDiaDaSemana(short d)
         {
-            var dia = (DiaDaSemana)Enum.Parse(typeof(DiaDaSemana), d.ToString());
+            var dia = (DiaDaSemana)d;
 
             return dia.ToString();
         }
